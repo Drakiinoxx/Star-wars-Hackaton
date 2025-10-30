@@ -10,11 +10,11 @@
   font-size: 1.5rem;
   font-weight: 500;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear forwards;
+  animation: crawl 30s linear forwards;
 }
 @keyframes crawl {
   0% {
-    top: 100vh;
+    top: 130vh;
     transform: rotateX(25deg) translateZ(0);
   }
   100% {
@@ -41,4 +41,13 @@
 /* Transition overlay noir */
 .duration-2000 {
   transition-duration: 2000ms;
+}
+
+.poulet {
+  padding: 80px;
+}
+
+.cocote {
+  padding: 1rem;
+  margin: 10px;
 }

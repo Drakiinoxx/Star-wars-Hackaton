@@ -16,3 +16,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.merde,
+.oui,
+.non,
+.help {
+  margin-top: 0.75rem;
+}
+
+.enfin {
+  padding: 1.5rem;
+}
