@@ -26,6 +26,7 @@ function Planetes() {
             <h3>{planet.name}</h3>
           </div>
         ))}
+        
       </div>
         ) : (
             <p>Chargement ...</p>
