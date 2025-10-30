@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/SolarSystem.css"; 
+import { Link } from "react-router";
+import "../styles/SolarSystem.css";
 
 function SolarSystem() {
   const [systems, setSystems] = useState([]);
@@ -15,12 +15,16 @@ function SolarSystem() {
     <div className="solar-container">
       <div className="systems-grid">
         {systems.map((system) => (
-          <Link 
-            key={system.name} 
-            to={`/SolarSystem/${(system.name)}`} 
+          <Link
+            key={system.name}
+            to={`/SolarSystem/${system.name}`}
             className="system-card"
           >
-            <img src={system.image} alt={system.name} className="system-image" />
+            <img
+              src={system.image}
+              alt={system.name}
+              className="system-image"
+            />
             <h3>{system.name}</h3>
             <p>{system.description}</p>
           </Link>

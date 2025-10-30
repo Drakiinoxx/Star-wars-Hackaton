@@ -15,7 +15,7 @@ function VaisseauxCard() {
       {vaisseaux.map((vaisseau) => (
         <div
           key={vaisseau.id}
-          className="rounded-xl  text-center shadow-md hover:scale-105 transition-transform p-6 rounded-[20px] bg-[rgba(255,255,255,0.071)] backdrop-blur-[2px] shadow-[0_0_10px_rgba(255,255,255,0.15)] transition-transform duration-300 hover:scale-105"
+          className="text-center  hover:scale-105 transition-transform p-6 rounded-[20px] bg-[rgba(255,255,255,0.071)] backdrop-blur-[2px] shadow-[0_0_10px_rgba(255,255,255,0.15)]  duration-300 "
         >
           <img
             src={vaisseau.image}
