@@ -7,6 +7,10 @@ import CardCharaters from "./components/CardCharaters";
 import ListCharacters from "./components/ListCharacters";
 import SolarSystem from "./pages/SolarSystem";
 import Planetes from "./pages/Planetes";
+import Vaissseaux from "./pages/Vaisseaux";
+// import CardCharaters from "./components/CardCharaters";
+import ListCharacters from "./pages/ListCharacters";
+import CharacterDetails from "./pages/CharacterDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +21,8 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "/ListCharacters",
-        element: <ListCharacters />,
+        path: "/Vaissseaux",
+        element: <Vaissseaux />,
       },
       {
         path:"/SolarSystem",
@@ -28,6 +32,12 @@ const router = createBrowserRouter([
         path:"/SolarSystem/:systemName",
         element:<Planetes/>
       }
+      // {
+      //   path: "/ListCharacters",
+      //   element: <ListCharacters />,
+      // },
+      { path: "/characters/details/:id", element: <CharacterDetails /> },
+      { path: "/characters/:planet", element: <ListCharacters /> },
     ],
   },
 ]);
