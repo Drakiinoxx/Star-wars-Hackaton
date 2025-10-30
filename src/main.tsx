@@ -1,10 +1,46 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import App from "./App";
+import Homepage from "./pages/Homepage";
+import ListCharacters from "./pages/ListCharacters";
+import SolarSystem from "./pages/SolarSystem";
+import Planetes from "./pages/Planetes";
+import Vaissseaux from "./pages/Vaisseaux";
+import CharacterDetails from "./pages/CharacterDetails";
+
+const router = createBrowserRouter([
+  {
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        path: "/Vaissseaux",
+        element: <Vaissseaux />,
+      },
+      {
+        path:"/SolarSystem",
+        element: <SolarSystem/>
+      },
+      {
+        path:"/SolarSystem/:systemName",
+        element:<Planetes/>
+      },
+      {
+        path: "/ListCharacters",
+        element: <ListCharacters />,
+      },
+      { path: "/characters/details/:id", element: <CharacterDetails /> },
+      { path: "/characters/:planet", element: <ListCharacters /> },
+    ],
+  },
+]);
+
+const rootElement = document.getElementById("root");
+
+if (rootElement != null) {
+  ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
+}

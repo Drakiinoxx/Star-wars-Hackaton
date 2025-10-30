@@ -1,0 +1,44 @@
+.perspective {
+  perspective: 400px;
+}
+.star-wars-text {
+  position: relative;
+  width: 60%;
+  max-width: 900px;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear forwards;
+}
+@keyframes crawl {
+  0% {
+    top: 100vh;
+    transform: rotateX(25deg) translateZ(0);
+  }
+  100% {
+    top: -500vh;
+    transform: rotateX(25deg) translateZ(-1000px);
+  }
+}
+
+@keyframes fadeInSlow {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInSlow {
+  animation: fadeInSlow 2s ease-out forwards;
+}
+
+/* Transition overlay noir */
+.duration-2000 {
+  transition-duration: 2000ms;
+}

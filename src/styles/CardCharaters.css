@@ -1,0 +1,46 @@
+.img-perso-test {
+  border-radius: 30px;
+
+  mask-image: linear-gradient(to top, black 95%, transparent 100%),
+    linear-gradient(to bottom, black 95%, transparent 100%),
+    linear-gradient(to left, black 95%, transparent 100%),
+    linear-gradient(to right, black 95%, transparent 100%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+.img-perso {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  object-position: top;
+  background: transparent;
+  mask-image: linear-gradient(to top, black 90%, transparent 100%),
+    linear-gradient(to bottom, black 90%, transparent 100%),
+    linear-gradient(to left, black 90%, transparent 100%),
+    linear-gradient(to right, black 90%, transparent 100%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
+p {
+  text-align: center;
+  background: transparent;
+}
+
+.card-container {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); */
+    /* background: none; */
+  }
+}
