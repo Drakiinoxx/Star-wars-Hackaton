@@ -2,8 +2,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import App from "./App";
-
 import Homepage from "./pages/Homepage";
+import CardCharaters from "./components/CardCharaters";
+import ListCharacters from "./components/ListCharacters";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/ListCharacters",
+        element: <ListCharacters />,
       },
     ],
   },

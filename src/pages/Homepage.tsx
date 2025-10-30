@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import "./homepage.css";
+import "../styles/homepage.css";
 
 function Homepage() {
   const [showMain, setShowMain] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {    
+    document.body.style.overflow = "hidden";
     const timer = setTimeout(() => {
       setShowMain(true);
-    }, 24000);
+      document.body.style.overflow = "auto";
+    }, 24000); 
 
     return () => clearTimeout(timer);
   }, []);
