@@ -1,10 +1,11 @@
+import { Outlet } from "react-router";
 import "./App.css";
-import ListCharacters from "./components/ListCharacters";
+
 
 function App() {
   return (
     <>
-      <ListCharacters />
+      <Outlet />
     </>
   );
 }

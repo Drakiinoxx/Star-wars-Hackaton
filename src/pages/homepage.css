@@ -1,0 +1,24 @@
+.perspective {
+  perspective: 400px;
+}
+.star-wars-text {
+  position: relative;
+  width: 60%;
+  max-width: 900px;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear forwards;
+}
+@keyframes crawl {
+  0% {
+    top: 100vh;
+    transform: rotateX(25deg) translateZ(0);
+  }
+  100% {
+    top: -500vh;
+    transform: rotateX(25deg) translateZ(-1000px);
+  }
+}
