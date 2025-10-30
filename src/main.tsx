@@ -3,8 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import App from "./App";
 import Homepage from "./pages/Homepage";
-import CardCharaters from "./components/CardCharaters";
-import ListCharacters from "./components/ListCharacters";
+import Vaissseaux from "./pages/Vaisseaux";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +14,8 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "/ListCharacters",
-        element: <ListCharacters />,
+        path: "/Vaissseaux",
+        element: <Vaissseaux />,
       },
     ],
   },
