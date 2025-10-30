@@ -1,0 +1,35 @@
+img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-position: top;
+  background: transparent;
+  backdrop-filter: blur(1px);
+  mask-image: linear-gradient(to top, black 80%, transparent 100%),
+    linear-gradient(to bottom, black 80%, transparent 100%),
+    linear-gradient(to left, black 80%, transparent 100%),
+    linear-gradient(to right, black 80%, transparent 100%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
+p {
+  text-align: center;
+  background: transparent;
+}
+
+.card-container {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.05); /* ✅ agrandit légèrement */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25); /* un peu plus de lumière */
+  }
+}
