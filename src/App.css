@@ -8,4 +8,5 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: black;
+  min-height: 100vh;
 }

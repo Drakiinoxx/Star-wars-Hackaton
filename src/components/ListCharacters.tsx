@@ -1,14 +1,17 @@
 import CardCharaters from "./CardCharaters";
+import { useParams } from "react-router";
 import "../styles/ListCharacters.css";
 
 function ListCharacters() {
+  const { planet } = useParams();
+
   return (
-    <>
-      <h2>HABITANTS</h2>
+    <div className="center">
+      <h2>LES HABITANTS DE {planet.toUpperCase()}</h2>
       <div className="flex-characters">
-        <CardCharaters />
+        <CardCharaters planet={planet} />
       </div>
-    </>
+    </div>
   );
 }
 

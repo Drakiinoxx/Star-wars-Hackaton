@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/CardCharaters.css";
+import { Link } from "react-router";
 
-function CardCharaters() {
+function CardCharaters({ planet }) {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -9,14 +10,38 @@ function CardCharaters() {
       .then((res) => res.json())
       .then((resData) => console.log(resData) || setCharacters(resData));
   }, []);
+
+  const filteredCharacters = planet
+    ? characters.filter((char) => {
+        const home =
+          typeof char.homeworld === "string"
+            ? char.homeworld.toLowerCase()
+            : char.homeworld?.name?.toLowerCase();
+
+        return home === planet?.toLowerCase();
+      })
+    : characters;
+
   return (
     <>
-      {characters.map((character) => (
-        <div className="card-container">
-          <img src={character.image} alt={character.name} />
-          <p>{character.name}</p>
-        </div>
-      ))}
+      {filteredCharacters.length > 0 ? (
+        filteredCharacters.map((character) => (
+          <Link
+            to={`/characters/details/${character.id}`}
+            key={character.id}
+            className="card-container"
+          >
+            <img
+              className="img-perso"
+              src={character.image}
+              alt={character.name}
+            />
+            <p>{character.name}</p>
+          </Link>
+        ))
+      ) : (
+        <p>Aucun habitant trouvé pour {planet}</p>
+      )}
     </>
   );
 }
