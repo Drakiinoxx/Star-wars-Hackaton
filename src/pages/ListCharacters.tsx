@@ -1,4 +1,4 @@
-import CardCharaters from "./CardCharaters";
+import CardCharaters from "../components/CardCharaters";
 import { useParams } from "react-router";
 import "../styles/ListCharacters.css";
 

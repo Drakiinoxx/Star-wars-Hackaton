@@ -31,11 +31,13 @@ function CardCharaters({ planet }) {
             key={character.id}
             className="card-container"
           >
-            <img
-              className="img-perso"
-              src={character.image}
-              alt={character.name}
-            />
+            <div className="img-perso-test">
+              <img
+                className="img-perso"
+                src={character.image}
+                alt={character.name}
+              />
+            </div>
             <p>{character.name}</p>
           </Link>
         ))

@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App";
 import Homepage from "./pages/Homepage";
 // import CardCharaters from "./components/CardCharaters";
-import ListCharacters from "./components/ListCharacters";
+import ListCharacters from "./pages/ListCharacters";
 import CharacterDetails from "./pages/CharacterDetails";
 
 const router = createBrowserRouter([
