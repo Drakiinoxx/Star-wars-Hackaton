@@ -1,0 +1,51 @@
+.solar-container {
+    color: #fff; 
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .systems-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+  }
+  
+  .system-card {
+    background-color: #1a1a1a; 
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px; 
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .system-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #fff;
+  }
+  
+  .system-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+
+  .system-card h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .system-card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
