@@ -4,7 +4,7 @@ import "../styles/ListCharacters.css";
 function ListCharacters() {
   return (
     <>
-      <h1>HABITANTS</h1>
+      <h2>HABITANTS</h2>
       <div className="flex-characters">
         <CardCharaters />
       </div>
