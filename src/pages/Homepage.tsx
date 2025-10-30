@@ -7,7 +7,7 @@ function Homepage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowMain(true);
-    }, 30000);
+    }, 24000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,15 +16,15 @@ function Homepage() {
     return (
       <div className="h-screen w-full flex items-center justify-center perspective">
         <div className="star-wars-text text-yellow-400">
-          <p>
+          <p className="text-5xl">
             Il y a bien longtemps, dans une galaxie lointaine... Les étudiants
             de la Wild Code School se lancèrent dans un Hackathon des plus
-            grandiose, porté sur le thème de ...
+            grandiose, porté sur ...
           </p>
-          <h1 className="mt-8 text-5xl font-bold flex justify-center">
+          <h1 className="m-8 text-9xl font-bold flex justify-center p-10">
             STAR WARS
           </h1>
-          <p className="mt-6">
+          <p className="mt-6 text-5xl">
             Vous allez découvrir un monde remplis d'histoire pour arrivé jusqu'à
             vos personnages préférées, ou bien... les plus détéstés.
           </p>
