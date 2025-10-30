@@ -8,7 +8,7 @@ import SolarSystem from "./pages/SolarSystem";
 import Planetes from "./pages/Planetes";
 import Vaissseaux from "./pages/Vaisseaux";
 import CharacterDetails from "./pages/CharacterDetails";
-import Start from "./pages/start";
+
 
 const router = createBrowserRouter([
   {
@@ -16,10 +16,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Start />,
-      },
-      {
-        path: "/home",
         element: <Homepage />,
       },
       {
