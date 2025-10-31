@@ -23,15 +23,15 @@ function VaisseauxCard() {
           <img
             src={vaisseau.image}
             alt={vaisseau.nom}
-            className="w-52 h-36 object-cover rounded-lg mx-auto anais"
+            className="w-52 h-36 object-cover rounded-lg mx-auto text-white anais"
           />
           <div className="merde">
-            <h3 className="text-lg font-bold underline helpme">
+            <h3 className="text-lg font-bold underline text-white helpme">
               {vaisseau.nom}
             </h3>
-            <p className="oui">{vaisseau.type}</p>
-            <p className="non">{vaisseau.affiliation}</p>
-            <p className="help">{vaisseau.description}</p>
+            <p className="oui  text-white">{vaisseau.type}</p>
+            <p className="non text-white">{vaisseau.affiliation}</p>
+            <p className="help text-white">{vaisseau.description}</p>
           </div>
         </Link>
       ))}
