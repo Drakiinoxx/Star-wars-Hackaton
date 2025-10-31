@@ -1,6 +1,9 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
+import "../styles/ButonNav.css";
+import ButonNav from "../components/ButonNav";
 
 function Planetes() {
   const { systemName } = useParams();
@@ -19,6 +22,9 @@ function Planetes() {
 
   return (
     <div className="solar-container">
+      <div className="back-button-container">
+      <ButonNav/>
+      </div>
       {system ? (
         <div className="systems-grid">
           {system.planets.map((planet) => (
