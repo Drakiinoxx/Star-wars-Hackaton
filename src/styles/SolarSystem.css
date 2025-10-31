@@ -17,20 +17,41 @@
     justify-content: center; 
   }
   
-  .system-card {
-    background-color: #1a1a1a; 
-    border-radius: 15px;
-    padding: 15px;
-    width: 250px; 
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
+/*
+.system-card {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  text-align: center;
+  /*border-radius: 15px;*/
+  /*padding: 15px;
+  width: 250px; 
+
   .system-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #fff;
+  transform: scale(1.05);
+
   }
-  
+}
+*/
+.system-card {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.169);
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer; 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.system-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); 
+}
+
   .system-image {
     width: 100%;
     height: 150px;

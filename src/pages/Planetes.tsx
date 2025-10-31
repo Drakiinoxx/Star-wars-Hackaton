@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 function Planetes() {
   const { systemName } = useParams();
@@ -21,14 +22,14 @@ function Planetes() {
       {system ? (
         <div className="systems-grid">
           {system.planets.map((planet) => (
-            <div key={planet.name} className="system-card">
+            <Link to={`/characters/${planet.name.toLowerCase()}`} key={planet.name} className="system-card">
               <img
                 src={planet.image}
                 alt={planet.name}
                 className="system-image"
               />
               <h3>{planet.name}</h3>
-            </div>
+              </Link>
           ))}
         </div>
       ) : (
