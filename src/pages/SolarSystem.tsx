@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
 import "../styles/SolarSystem.css";
+import ButonNav from "../components/ButonNav";
 
 function SolarSystem() {
   const [systems, setSystems] = useState([]);
@@ -13,6 +15,10 @@ function SolarSystem() {
 
   return (
     <div className="solar-container">
+
+      <div className="back-button-container">
+      <ButonNav/>
+      </div>
       <div className="systems-grid">
         {systems.map((system) => (
           <Link

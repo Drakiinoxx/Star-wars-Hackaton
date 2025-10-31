@@ -2,7 +2,7 @@
     color: #fff; 
     min-height: 100vh;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   
     display: flex;
     flex-direction: column;
@@ -62,11 +62,19 @@
   
 
   .system-card h3 {
+    font-size: 20px;
     margin: 10px 0 5px;
+    font-weight: bold;
   }
   
   .system-card p {
     font-size: 14px;
     line-height: 1.4;
   }
+
+.back-button-container {
+  margin-bottom: 70px; 
+  display: flex;
+  justify-content: center; 
+}
   
